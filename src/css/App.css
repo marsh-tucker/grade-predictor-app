@@ -1,0 +1,25 @@
+/* use when you want to style specific components in the app*/
+.semester-panel-main-content {
+    padding: 20px;
+}
+
+.navbar-content {
+    padding: 5px;
+    justify-content: center;
+}
+.navbar-app-title {
+    font-weight: 1000;
+}
+
+.semester-panel-main-content {
+    /*using padding top instead of margin top so it doesnt affect other elements outside of it*/
+   padding-top: 80px;
+}
+
+.custom-blue {
+    background-color: #4e9ef4; /* your preferred blue */
+}
+
+
+
+
