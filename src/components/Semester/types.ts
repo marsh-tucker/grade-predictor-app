@@ -7,6 +7,12 @@ export interface Course {
 
 export interface CoursePropsList {
     courses: Course[];
+    semId: number;
+    //defining a property for a delete function which we will implenent when we use course panel as an element in semester panel
+    courseDelete: (
+        semId: number,
+        courseId: number
+    ) => void;
 }
 
 export interface Semester {
@@ -18,12 +24,25 @@ export interface Semester {
 
 export interface semesterPropsList {
     semesters: Semester[];
-    IsFutureSemester: (id: number, selection: string) => void,
+    IsFutureSemester: (
+        id: number,
+        selection: string
+    ) => void,
     addCourseToSemester: (
-    semId: number,
-    name: string,
-    hours: string,
-    grade: string
-    
-  ) => void;
+        semId: number,
+        name: string,
+        hours: string,
+        grade: string
+    ) => void;
+    removeCourse: (
+        semId: number,
+        courseId: number
+    ) => void;
+}
+export interface GPAPropsList {
+    calculateTotalGPA: () => {
+        currentGPA: number,
+        futureGPA: number,
+        predictedGPA: number
+    }  
 }
